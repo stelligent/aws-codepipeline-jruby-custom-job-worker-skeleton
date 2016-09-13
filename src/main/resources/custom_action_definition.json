@@ -1,0 +1,26 @@
+{
+    "category": "Build",
+    "provider": "JRuby",
+    "version": "1",
+    "settings": {
+        "entityUrlTemplate": "https://my-build-instance/job/{Config:CpRubyGuy}/",
+        "executionUrlTemplate": "https://my-build-instance/job/{Config:CpRubyGuy}/lastSuccessfulBuild/{ExternalExecutionId}/"
+    },
+    "configurationProperties": [{
+        "name": "CpRubyGuy",
+        "required": true,
+        "key": true,
+        "secret": false,
+        "queryable": false,
+        "description": "The name of the build project must be provided when this action is added to the pipeline.",
+        "type": "String"
+    }],
+    "inputArtifactDetails": {
+        "maximumCount": 1,
+        "minimumCount": 0 
+    },
+    "outputArtifactDetails": {
+        "maximumCount": 1,
+        "minimumCount": 0 
+    }
+}
